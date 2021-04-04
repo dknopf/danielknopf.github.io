@@ -132,6 +132,11 @@ button:focus {
     padding-right: 0px;
   }
 }
+
+.title-color {
+  color: #222222;
+}
+
 /* Main Title Area css
 ============================================================================================ */
 .main_title {
@@ -162,6 +167,11 @@ button:focus {
 
 .headshot {
   max-width: 45rem;
+}
+
+.logo_h {
+  max-width: 5rem;
+  max-height: 5rem;
 }
 
 .header_area {
@@ -3442,7 +3452,7 @@ h6 {
   position: relative;
   text-align: center;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .h_gallery_item .g_img_item:before {
   content: "";
@@ -3570,9 +3580,9 @@ h6 {
 .f_title {
   margin-bottom: 35px;
 }
-.f_title h3 {
+.f_title h2 {
   color: #fff;
-  font-size: 18px;
+  font-size: 2.5rem;
   font-weight: bold;
   font-family: "Heebo", sans-serif;
   margin-bottom: 0px;
@@ -3655,11 +3665,11 @@ h6 {
 }
 
 .social_widget p {
-  font-size: 14px;
+  font-size: 1.5rem;
   line-height: 24px;
   font-family: "Roboto", sans-serif;
   color: #777777;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .social_widget .list li {
   margin-right: 17px;
@@ -3667,7 +3677,7 @@ h6 {
 }
 .social_widget .list li a {
   color: #cccccc;
-  font-size: 14px;
+  font-size: 25px;
   transition: all 300ms linear 0s;
 }
 .social_widget .list li:last-child {
@@ -3690,3 +3700,17 @@ h6 {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+
+/* Start project page CSS
+============================================================================================ */
+/*---------------------------------------------------- */
+
+.project_banner_area {
+  position: relative;
+  z-index: 1;
+  min-height: 100px;
+  background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  margin-bottom: 60px;
+}
