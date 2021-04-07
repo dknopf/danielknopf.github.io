@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>MeetMe Personal</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="vendors/linericon/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css" />
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
+    <link rel="stylesheet" href="vendors/animate-css/animate.css" />
+    <link rel="stylesheet" href="vendors/popup/magnific-popup.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!--================Header Menu Area =================-->
+    <header class="header_area">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container box_1620">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="index.html"
+              ><img src="img/logo.png" alt=""
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#experience"
+                    >Experience</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--================Header Menu Area =================-->
+
+    <!--================Home Banner Area =================-->
+    <section class="project_banner_area">
+      <!-- <div class="box_1620">
+        <div class="banner_inner d-flex align-items-center">
+          <div class="container">
+            <div class="banner_content text-center"></div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!-- Start Sample Area -->
+    <section class="main-content">
+      <div class="container">
+        <div class="row justify-content-content">
+          <div class="col-12 text-center">
+            <h1 class="title-color">OurCampus</h1>
+          </div>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-10">
+            <img class="img-fluid" src="img/ourcampus/menu.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sample-text-area">
+      <div class="container">
+        <h3 class="text-heading title_color">A Problem To Be Solved</h3>
+        <p class="sample-text">
+          Wesleyan has several different eateries on campus, the main ones being
+          Usdan, Red & Black Cafe, and WesWings (Swings). Unfortunately,
+          Swings/RBC and Usdan each have different websites, both of which are
+          horribly designed and maddeningly confusing, making checking whats for
+          dinner a whole ordeal. Therefore, I joined with the
+          <a href="http://ourcampus.us.com/">OurCampus</a> team to work on a new
+          feature that would have all the daily menus in one place, as well as
+          some other neato features.
+        </p>
+        <div class="text-left pt-5">
+          <h3 class="text-heading title_color">A New Language + Problems</h3>
+          <p class="sample-text">
+            I worked on the scripts that scraped the menus from the R&B + Swings
+            <a href="https://weswings.com/">website</a>. To do so, I wrote a
+            JavaScript Firebase function that used request-promise and cheerio.
+            I had never used JavaScript before, so I had a lot of fun learning
+            the language, and then not a lot of fun learning about JavaScript
+            asynchronous calls. The menus for the two eateries have a lot of
+            quirks that made scraping them a bit of a pain. For starters, the
+            R&B menus are only posted as a picture of a printed menu, so
+            scraping that menu requires the use of image recognition. I used the
+            Google Vision API to recognize the text from the image, and then a
+            crazy regular expression (it was
+            <i
+              >/^(([^.\s]+ ?){1,4}(?![^.]{1,20}\n)(?=[^\n]*\n.+)|([^.\s]+
+              ?){1,4}(of the day))(?=\n{1,2})/gim</i
+            >
+            in case anyone was wondering) to differentiate the dish titles from
+            the dish descriptions. Then, the other main quirk of the menus was
+            that a different person uploads the menus each day, leading to wild
+            inconsistencies in formatting, requiring the use of several
+            different regular expressions and clever ways of squishing the menus
+            into a usable form for us.
+          </p>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-10">
+            <img class="img-fluid" src="img/ourcampus/rbc_menus.png" />
+          </div>
+        </div>
+        <div class="text-left pt-5">
+          <h3 class="text-heading title_color">Bonus Features!</h3>
+          <p class="sample-text">
+            In addition to just scraping the menus, I had the idea that users
+            should be able to get a notification when their favorite dishes are
+            available. To make this happen, every dish we scrape is added to a
+            "dish" collection in Firestore, and then when that dish is available
+            all users who are subscribed to it will receive a push notification.
+            Furthermore, I created an error handling function that notifies the
+            developers if certain errors occur, such as the swings website being
+            changed, the image recognition API failing, or any manner of errors
+            that could harm production. Lastly, I created a cleanup function to
+            clean up old menus each day to save Firestore space and to ensure
+            that old menus aren't displayed.
+          </p>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-10">
+            <img
+              class="img-fluid"
+              src="img/ourcampus/ourcampus_notifications.png"
+            />
+          </div>
+        </div>
+        <div class="text-left pt-5">
+          <h3 class="text-heading title_color">Launch</h3>
+          <p class="sample-text">
+            At the time of writing this, the OurCampus menu feature has over 700
+            daily users, which is about a
+            <i> quarter of the <strong>ENTIRE</strong> Wesleyan student body</i>
+          </p>
+        </div>
+        <div class="row py-5">
+          <div class="col-md-6 col-12 pb-3">
+            <a
+              href="https://itunes.apple.com/us/app/ourcampuswes/id1447905927?ls=1&mt=8"
+              class="genric-btn e-large info circle"
+            >
+              App Store</a
+            >
+          </div>
+          <div class="col-md-6 col-12 pb-3">
+            <a
+              href="https://play.google.com/store/apps/details?id=dev.davebaraka.ourcampus&hl=en_US"
+              class="genric-btn e-large info-border circle"
+            >
+              Google Play Store</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================Footer Area =================-->
+    <footer class="footer_area p_120" id="contact">
+      <div class="container">
+        <div class="row footer_inner">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <aside class="f_widget social_widget">
+                  <div class="f_title">
+                    <h2>Contact Me!</h2>
+                  </div>
+                  <ul class="list">
+                    <li>
+                      <a href="mailto:danielkn609@gmail.com"
+                        ><i class="fa fa-envelope"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/knopython"
+                        ><i class="fa fa-twitter"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/danielkn609/"
+                        ><i class="fa fa-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com/in/daniel-knopf-609/"
+                        ><i class="fa fa-linkedin"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--================End Footer Area =================-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendors/counter-up/jquery.counterup.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/theme.js"></script>
+  </body>
+</html>
