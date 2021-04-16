@@ -93,110 +93,104 @@
       <div class="container">
         <div class="row justify-content-content">
           <div class="col-12 text-center">
-            <h1 class="title-color">OurCampus</h1>
+            <h1 class="title-color">WesHack</h1>
           </div>
         </div>
         <div class="row justify-content-center pt-5">
           <div class="col-10">
-            <img class="img-fluid" src="img/project_pages/ourcampus/menu.png" />
+            <img
+              class="img-fluid"
+              src="img/project_pages/weshack/landing_page.png"
+            />
           </div>
         </div>
       </div>
     </section>
     <section class="sample-text-area">
       <div class="container">
-        <h3 class="text-heading title_color">A Problem To Be Solved</h3>
+        <h3 class="text-heading title_color">
+          A Lack of Practical Opportunities
+        </h3>
         <p class="sample-text">
-          Wesleyan has several different eateries on campus, the main ones being
-          Usdan, Red & Black Cafe, and WesWings (Swings). Unfortunately,
-          Swings/RBC and Usdan each have different websites, both of which are
-          horribly designed and maddeningly confusing, making checking whats for
-          dinner a whole ordeal. Therefore, I joined with the
-          <a href="http://ourcampus.us.com/">OurCampus</a> team to work on a new
-          feature that would have all the daily menus in one place, as well as
-          some other neato features.
+          Wesleyan has a great computer science department, but almost all of
+          the classes focus on the theoretical aspects of CS. These concepts are
+          definitely useful, but I always craved something more hands on, more
+          practical. For me, the obvious answer was hackathons and projects, but
+          I had to go outside of Wesleyan to find these opportunities. Going to
+          Hack@Brown or YaleHack was fun, but every time I did a hackathon
+          hosted by another school all I could think was, "why doesn't Wesleyan
+          have one of these?"
         </p>
         <div class="text-left pt-5">
-          <h3 class="text-heading title_color">A New Language + Problems</h3>
+          <h3 class="text-heading title_color">Code_Wes x Daniel Knopf</h3>
           <p class="sample-text">
-            I worked on the scripts that scraped the menus from the R&B + Swings
-            <a href="https://weswings.com/">website</a>. To do so, I wrote a
-            JavaScript Firebase function that used request-promise and cheerio.
-            I had never used JavaScript before, so I had a lot of fun learning
-            the language, and then not a lot of fun learning about JavaScript
-            asynchronous calls. The menus for the two eateries have a lot of
-            quirks that made scraping them a bit of a pain. For starters, the
-            R&B menus are only posted as a picture of a printed menu, so
-            scraping that menu requires the use of image recognition. I used the
-            Google Vision API to recognize the text from the image, and then a
-            crazy regular expression (it was
-            <i
-              >/^(([^.\s]+ ?){1,4}(?![^.]{1,20}\n)(?=[^\n]*\n.+)|([^.\s]+
-              ?){1,4}(of the day))(?=\n{1,2})/gim</i
+            I was planning to start a hackathon on my own junior year, but then
+            I heard that Code_Wes, the new coding club on campus, was planning
+            one. I eagerly joined in, excited to create a hackathon at Wes. It
+            became clear very quick that I was the most experienced one there,
+            as I was a year older and I had done 5 hackathons, while all the
+            Code_Wes people were sophomores and most had done only 1 hackathon,
+            if that. I quickly took on a leadership role as my experience proved
+            to be very helpful. I suggested we move the hackathon from February
+            to April to give us plenty of time to prepare, get sponsors, make a
+            website, and overall create a hackathon that was as high quality and
+            legit as that of other schools. I also set us up with weekly
+            scheduled meetings, a week-by-week schedule that went backtimed from
+            the hackathon date to the current moment, a website I built,
+            color-coded task assignment by week, and every other organizational
+            strategy I had learned while making The Great Invention Heist.
+          </p>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-10">
+            <img
+              class="img-fluid"
+              src="img/project_pages/weshack/logo_filled.png"
+            />
+          </div>
+        </div>
+        <div class="text-left pt-5">
+          <h3 class="text-heading title_color">Beginner Friendly</h3>
+          <p class="sample-text">
+            When organizing WesHack, I made sure to emphasize throughout that
+            this was an event that should be
+            <strong
+              >open and inclusive to all, regardless of skill level.</strong
             >
-            in case anyone was wondering) to differentiate the dish titles from
-            the dish descriptions. Then, the other main quirk of the menus was
-            that a different person uploads the menus each day, leading to wild
-            inconsistencies in formatting, requiring the use of several
-            different regular expressions and clever ways of squishing the menus
-            into a usable form for us.
+            The lack of practical opportunities at Wes makes a lot of people
+            nervous about their skill level, believing that they aren't talented
+            enough or don't know enough for software engineering. Since
+            practical projects that grant that experience require the confidence
+            to seek them out at Wes, this is an ugly self-perpetuating cycle. I
+            wanted to make sure <i>all</i> CS students at Wes knew that WesHack
+            was a perfect fun and low-stakes opportunity for them to gain the
+            practical experience and confidence that they wanted. We emphasized
+            this idea in every single email we sent out, in multiple places on
+            our website, in every blurb, in every Instagram post, to really
+            hammer this idea home. I also made sure we hosted beginner workshops
+            on topics such as Github/HTML/CSS and Python Flask/Google App
+            Engine, which I hosted.
           </p>
-        </div>
-        <div class="row justify-content-center pt-5">
-          <div class="col-10">
-            <img
-              class="img-fluid"
-              src="img/project_pages/ourcampus/rbc_menus.png"
-            />
-          </div>
         </div>
         <div class="text-left pt-5">
-          <h3 class="text-heading title_color">Bonus Features!</h3>
-          <p class="sample-text">
-            In addition to just scraping the menus, I had the idea that users
-            should be able to get a notification when their favorite dishes are
-            available. To make this happen, every dish we scrape is added to a
-            "dish" collection in Firestore, and then when that dish is available
-            all users who are subscribed to it will receive a push notification.
-            Furthermore, I created an error handling function that notifies the
-            developers if certain errors occur, such as the swings website being
-            changed, the image recognition API failing, or any manner of errors
-            that could harm production. Lastly, I created a cleanup function to
-            clean up old menus each day to save Firestore space and to ensure
-            that old menus aren't displayed.
-          </p>
-        </div>
-        <div class="row justify-content-center pt-5">
-          <div class="col-10">
-            <img
-              class="img-fluid"
-              src="img/project_pages/ourcampus/ourcampus_notifications.png"
-            />
-          </div>
-        </div>
-        <div class="text-left pt-5">
-          <h3 class="text-heading title_color">Launch</h3>
-          <p class="sample-text">
-            At the time of writing this, the OurCampus menu feature has over 700
-            daily users, which is about a
-            <i> quarter of the <strong>ENTIRE</strong> Wesleyan student body</i>
-          </p>
+          <h3 class="text-heading title_color">Results</h3>
+          <p class="sample-text">TBD, hopefully everything goes well ;)</p>
         </div>
         <div class="row py-5">
           <div class="col-md-6 col-12 pb-3">
             <a
-              href="https://itunes.apple.com/us/app/ourcampuswes/id1447905927?ls=1&mt=8"
+              href="https://www.weshack.org"
               class="genric-btn e-large info circle"
             >
-              App Store</a
+              Website</a
             >
           </div>
           <div class="col-md-6 col-12 pb-3">
             <a
-              href="https://play.google.com/store/apps/details?id=dev.davebaraka.ourcampus&hl=en_US"
+              href="https://www.instagram.com/wes.hack/"
               class="genric-btn e-large info-border circle"
             >
-              Google Play Store</a
+              Instagram</a
             >
           </div>
         </div>

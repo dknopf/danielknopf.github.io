@@ -93,110 +93,116 @@
       <div class="container">
         <div class="row justify-content-content">
           <div class="col-12 text-center">
-            <h1 class="title-color">OurCampus</h1>
+            <h1 class="title-color">Happy Trails</h1>
           </div>
         </div>
-        <div class="row justify-content-center pt-5">
+        <div class="row justify-content-center text-center pt-5">
           <div class="col-10">
-            <img class="img-fluid" src="img/project_pages/ourcampus/menu.png" />
+            <div class="video-wrapper">
+              <iframe
+                width="100%"
+                height="auto!important"
+                src="https://www.youtube.com/embed/-T_I2ymakVM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <!-- <img class="img-fluid" src="img/ourcampus/menu.png" /> -->
           </div>
         </div>
       </div>
     </section>
     <section class="sample-text-area">
       <div class="container">
-        <h3 class="text-heading title_color">A Problem To Be Solved</h3>
+        <h3 class="text-heading title_color">After School (Before School)</h3>
         <p class="sample-text">
-          Wesleyan has several different eateries on campus, the main ones being
-          Usdan, Red & Black Cafe, and WesWings (Swings). Unfortunately,
-          Swings/RBC and Usdan each have different websites, both of which are
-          horribly designed and maddeningly confusing, making checking whats for
-          dinner a whole ordeal. Therefore, I joined with the
-          <a href="http://ourcampus.us.com/">OurCampus</a> team to work on a new
-          feature that would have all the daily menus in one place, as well as
-          some other neato features.
+          During the long winter break between fall and spring semester junior
+          year (2.5 months of covid isolation), I did Hack@Brown with my friends
+          Nalu Tripician, Isabel Armour-Garb, and Jack Canavan-Gosselin. The
+          theme was After School, and I had the idea to make a website that lets
+          you plot a route from point A to point B that isn't the most direct
+          but contains various local hot spots and fun destinations. The idea
+          was that students could spice up their walks to and from school with
+          our app, which Nalu named "Happy Trails."
         </p>
         <div class="text-left pt-5">
-          <h3 class="text-heading title_color">A New Language + Problems</h3>
+          <h3 class="text-heading title_color">Creation!</h3>
           <p class="sample-text">
-            I worked on the scripts that scraped the menus from the R&B + Swings
-            <a href="https://weswings.com/">website</a>. To do so, I wrote a
-            JavaScript Firebase function that used request-promise and cheerio.
-            I had never used JavaScript before, so I had a lot of fun learning
-            the language, and then not a lot of fun learning about JavaScript
-            asynchronous calls. The menus for the two eateries have a lot of
-            quirks that made scraping them a bit of a pain. For starters, the
-            R&B menus are only posted as a picture of a printed menu, so
-            scraping that menu requires the use of image recognition. I used the
-            Google Vision API to recognize the text from the image, and then a
-            crazy regular expression (it was
-            <i
-              >/^(([^.\s]+ ?){1,4}(?![^.]{1,20}\n)(?=[^\n]*\n.+)|([^.\s]+
-              ?){1,4}(of the day))(?=\n{1,2})/gim</i
-            >
-            in case anyone was wondering) to differentiate the dish titles from
-            the dish descriptions. Then, the other main quirk of the menus was
-            that a different person uploads the menus each day, leading to wild
-            inconsistencies in formatting, requiring the use of several
-            different regular expressions and clever ways of squishing the menus
-            into a usable form for us.
+            Since I had the most web development experience, with
+            <a href="spotcheck.html">SpotCheck</a> and the privacy tech lab, I
+            created the website. I already knew Flask, but I wanted to learn
+            something more useful, so I decided to teach myself Django. The
+            knowledge I learned from Flask was pretty easy to transition over to
+            this similar technology, as the concepts of routes, views,
+            templates, and Jinja-esque syntax were all alike. In hindsight,
+            Flask would have been a much better fit for this program, as all I
+            needed was a lightweight web app framework, since we didn't use any
+            of Django's database or authentication capabilities. I built and
+            deployed the Happy Trails website to Google App Engine, which has
+            become a breeze with as Google Cloud and I are best friends at this
+            point. The rest of the team built the backend logic, which uses the
+            Google Maps API to plot places and routes based on our hand-crafted
+            ranking system.
           </p>
         </div>
         <div class="row justify-content-center pt-5">
           <div class="col-10">
             <img
               class="img-fluid"
-              src="img/project_pages/ourcampus/rbc_menus.png"
+              src="img/project_pages/happy_trails/route.png"
             />
           </div>
         </div>
         <div class="text-left pt-5">
-          <h3 class="text-heading title_color">Bonus Features!</h3>
+          <h3 class="text-heading title_color">Final Product!</h3>
           <p class="sample-text">
-            In addition to just scraping the menus, I had the idea that users
-            should be able to get a notification when their favorite dishes are
-            available. To make this happen, every dish we scrape is added to a
-            "dish" collection in Firestore, and then when that dish is available
-            all users who are subscribed to it will receive a push notification.
-            Furthermore, I created an error handling function that notifies the
-            developers if certain errors occur, such as the swings website being
-            changed, the image recognition API failing, or any manner of errors
-            that could harm production. Lastly, I created a cleanup function to
-            clean up old menus each day to save Firestore space and to ensure
-            that old menus aren't displayed.
+            After two days of feverish coding, we came up with a version of
+            Happy Trails that, for the most part, worked. There are a few quirks
+            about it, mostly stemming from problems in our ranking of locations.
+            One bug that evaded me was referencing static assets using Django.
+            For some reason I couldn't get any of my static assets (imgs, fonts,
+            etc) to load. I used a crafty way of getting around this, which
+            involved creating a publicly available GitHub repository and
+            uploading the image assets there and then providing an absolute
+            reference to the URL of the uploaded image. Now that I have more
+            experience, I'm pretty sure this is because I didn't properly
+            understand how paths work, but in other Django projects I've done I
+            was able to successfulyl use local images, so maybe one day I'll
+            come back and fix Happy Trails' weird quirk.
           </p>
         </div>
         <div class="row justify-content-center pt-5">
           <div class="col-10">
             <img
               class="img-fluid"
-              src="img/project_pages/ourcampus/ourcampus_notifications.png"
+              src="img/project_pages/happy_trails/winning_reaction.JPG"
             />
           </div>
         </div>
         <div class="text-left pt-5">
-          <h3 class="text-heading title_color">Launch</h3>
+          <h3 class="text-heading title_color">Victory!</h3>
           <p class="sample-text">
-            At the time of writing this, the OurCampus menu feature has over 700
-            daily users, which is about a
-            <i> quarter of the <strong>ENTIRE</strong> Wesleyan student body</i>
+            Luckily for us, we went to the closing ceremonies, because we ended
+            up winning two categories! We won "best domain name," for our use of
+            HappyTrails.space, and then we got into the top 25, so we won a year
+            of Wolfram Alpha Pro (which I'm still waiting for, in April... c'mon
+            Wolfram). Overall a very fun experience which taught me a lot about
+            a new web framework and cemented my web app development skills.
+            Check Happy Trails out below! Forgive us if it doesn't work, the
+            Google Maps API shuts off when our trial billing account runs out of
+            money :(
           </p>
         </div>
         <div class="row py-5">
           <div class="col-md-6 col-12 pb-3">
             <a
-              href="https://itunes.apple.com/us/app/ourcampuswes/id1447905927?ls=1&mt=8"
+              href="http://www.happytrails.space/"
               class="genric-btn e-large info circle"
             >
-              App Store</a
-            >
-          </div>
-          <div class="col-md-6 col-12 pb-3">
-            <a
-              href="https://play.google.com/store/apps/details?id=dev.davebaraka.ourcampus&hl=en_US"
-              class="genric-btn e-large info-border circle"
-            >
-              Google Play Store</a
+              Happy Trails</a
             >
           </div>
         </div>
