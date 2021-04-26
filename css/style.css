@@ -171,6 +171,7 @@ button:focus {
 
 .headshot {
   max-width: 45rem;
+  max-height: 45rem;
 }
 
 .logo_h {
