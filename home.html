@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="icon" href="img/favicon.png" type="image/png" />
-    <title>Daniel Knopf-OurCampus</title>
+    <title>Daniel Knopf—Happy Trails</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="vendors/linericon/style.css" />
@@ -33,6 +33,7 @@
             <a class="navbar-brand logo_h" href="index.html"
               ><img class="navbar-logo" src="img/daniel.png" alt=""
             /></a>
+
             <button
               class="navbar-toggler"
               type="button"
@@ -94,141 +95,117 @@
       <div class="container">
         <div class="row justify-content-content">
           <div class="col-12 text-center">
-            <h1 class="title-color">OurCampus</h1>
+            <h1 class="title-color">Housing Options Made Easy (HOME)</h1>
           </div>
         </div>
-        <div class="row justify-content-center pt-5">
-          <div class="row justify-content-center pt-5">
-            <div class="col-5 p-5 dual-image">
-              <img
-                class="img-fluid"
-                src="img/project_pages/ourcampus/menu1.PNG"
-              />
+        <div class="row justify-content-center text-center pt-5">
+          <div class="col-10">
+            <div class="video-wrapper">
+              <iframe
+                width="100%"
+                height="auto!important"
+                src="https://www.youtube.com/embed/653iLNyFUj8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
-            <div class="col-5 p-5 dual-image">
-              <img
-                class="img-fluid"
-                src="img/project_pages/ourcampus/menu2.PNG"
-              />
-            </div>
+
+            <!-- <img class="img-fluid" src="img/ourcampus/menu.png" /> -->
           </div>
         </div>
       </div>
     </section>
     <section class="sample-text-area">
       <div class="container">
+        <h3 class="text-heading title_color"></h3>
+        <p class="sample-text"></p>
         <div class="text-left pt-5">
           <h3 class="text-heading title_color">Description</h3>
           <p class="sample-text">
-            The OurCampus menu function puts all of the Wesleyan eatery menus in
-            one place. I wrote a series of Javascript webscrapers for this that
-            use Cheerio to scrape the Swings and Red & Black Cafe menus and then
-            use regular expressions to find the actual menu items. I used
-            Firebse functions to automate the scraping, as well as to cleanup
-            the firestore every day and to send push notifications to users when
-            a dish they want is available that day.
+            HOME is an app/website that streamlines the Wesleyan housing
+            selection process by allowing users to filter houses based on
+            important qualities, such as occupancy, number of full beds, number
+            of bathrooms, overall rating, loud/quiet street, single/multiple
+            units, and street. Users can also submit ratings of and comments
+            about houses they have lived in which can be seen by househunters.
+            It uses firebase/firestore for backend, with firebase
+            authentication. It was built by me, Isabel Armour-Garb, Jack
+            Canavan-Gosselin, and Nalu Tripician during WesHack 2021. We built
+            it in react-native to be usable on iOS, Android, and web.
           </p>
         </div>
         <div class="text-left pt-5">
-          <h3 class="text-heading title_color">A Problem To Be Solved</h3>
+          <h3 class="text-heading title_color">A Difficult Interface</h3>
           <p class="sample-text">
-            Wesleyan has several different eateries on campus, the main ones
-            being Usdan, Red & Black Cafe, and WesWings (Swings). Unfortunately,
-            Swings/RBC and Usdan each have different websites, both of which are
-            horribly designed and maddeningly confusing, making checking whats
-            for dinner a whole ordeal. Therefore, I joined with the
-            <a href="http://ourcampus.us.com/">OurCampus</a> team to work on a
-            new feature that would have all the daily menus in one place, as
-            well as some other neato features.
+            Like many of my projects, I came up with the idea for HOME when I
+            became frustrated with the limitations of the Wesleyan housing
+            selection website. Coming up with a ranking of the housing my group
+            wanted required us to create an Excel spreadsheet where one of us
+            manually went to the page for each house and inputted the
+            description of the house (number of bathrooms, full beds, porch,
+            etc) intoour spreadsheet. I wanted to be able to easily filter out
+            houses with negative traits, such as twin beds or few bathrooms, to
+            easily find the best houses.
           </p>
         </div>
+
         <div class="text-left pt-5">
-          <h3 class="text-heading title_color">A New Language + Problems</h3>
+          <h3 class="text-heading title_color">Creation!</h3>
           <p class="sample-text">
-            I worked on the scripts that scraped the menus from the R&B + Swings
-            <a href="https://weswings.com/">website</a>. To do so, I wrote a
-            JavaScript Firebase function that used request-promise and cheerio.
-            I had never used JavaScript before, so I had a lot of fun learning
-            the language, and then not a lot of fun learning about JavaScript
-            asynchronous calls. The menus for the two eateries have a lot of
-            quirks that made scraping them a bit of a pain. For starters, the
-            R&B menus are only posted as a picture of a printed menu, so
-            scraping that menu requires the use of image recognition. I used the
-            Google Vision API to recognize the text from the image, and then a
-            crazy regular expression (it was
-            <i
-              >/^(([^.\s]+ ?){1,4}(?![^.]{1,20}\n)(?=[^\n]*\n.+)|([^.\s]+
-              ?){1,4}(of the day))(?=\n{1,2})/gim</i
-            >
-            in case anyone was wondering) to differentiate the dish titles from
-            the dish descriptions. Then, the other main quirk of the menus was
-            that a different person uploads the menus each day, leading to wild
-            inconsistencies in formatting, requiring the use of several
-            different regular expressions and clever ways of squishing the menus
-            into a usable form for us.
-          </p>
-        </div>
-        <div class="row justify-content-center pt-5">
-          <div class="col-5 p-5 dual-image">
-            <img class="img-fluid" src="img/project_pages/ourcampus/rbc1.png" />
-          </div>
-          <div class="col-5 p-5 dual-image">
-            <img class="img-fluid" src="img/project_pages/ourcampus/rbc2.png" />
-          </div>
-        </div>
-        <div class="text-left pt-5">
-          <h3 class="text-heading title_color">Bonus Features!</h3>
-          <p class="sample-text">
-            In addition to just scraping the menus, I had the idea that users
-            should be able to get a notification when their favorite dishes are
-            available. To make this happen, every dish we scrape is added to a
-            "dish" collection in Firestore, and then when that dish is available
-            all users who are subscribed to it will receive a push notification.
-            Furthermore, I created an error handling function that notifies the
-            developers if certain errors occur, such as the swings website being
-            changed, the image recognition API failing, or any manner of errors
-            that could harm production. Lastly, I created a cleanup function to
-            clean up old menus each day to save Firestore space and to ensure
-            that old menus aren't displayed.
+            Our team decided to make HOME an app, since we wanted users to be
+            able to submit images and we knew that very few people were likely
+            to take a picture on their phone and then upload it to a website. I
+            suggsted that we use react-native, since I had learned about it a
+            little in class and the idea of using one Javascript codebase to
+            make an iOS, Android, and web app at the same time was immensely
+            cool. It took us a while to get the hang of react-native and
+            Javascript, but we were able to create a fully functional app by the
+            end of the hackathon!
           </p>
         </div>
         <div class="row justify-content-center pt-5">
           <div class="col-5 p-5 dual-image">
             <img
               class="img-fluid"
-              src="img/project_pages/ourcampus/notif1.png"
+              src="img/project_pages/home/home_filters.png"
             />
           </div>
           <div class="col-5 p-5 dual-image">
             <img
               class="img-fluid"
-              src="img/project_pages/ourcampus/notif2.png"
+              src="img/project_pages/home/house_list.png"
             />
           </div>
         </div>
         <div class="text-left pt-5">
-          <h3 class="text-heading title_color">Launch</h3>
+          <h3 class="text-heading title_color">Victory and Moving Forward</h3>
           <p class="sample-text">
-            At the time of writing this, the OurCampus menu feature has over 700
-            daily users, which is about a
-            <i> quarter of the <strong>ENTIRE</strong> Wesleyan student body</i>
+            Our team won second place at WesHack, which was very exciting, as we
+            were able to continue our winning streak from Hack@Brown and
+            <a href="happy_trails.html">Happy Trails</a>. We plan to polish up
+            HOME to improve the UI and to allow users to also submit images of
+            their house, and then we will deploy it to the App Store and the
+            Google Play Store and get it into the hands of actual Wesleyan
+            students!
           </p>
         </div>
         <div class="row py-5">
           <div class="col-md-6 col-12 pb-3">
             <a
-              href="https://itunes.apple.com/us/app/ourcampuswes/id1447905927?ls=1&mt=8"
+              href="https://housingoptionsmadeeasy.web.app/"
               class="genric-btn e-large info circle"
             >
-              App Store</a
+              Web App</a
             >
           </div>
           <div class="col-md-6 col-12 pb-3">
             <a
-              href="https://play.google.com/store/apps/details?id=dev.davebaraka.ourcampus&hl=en_US"
+              href="https://github.com/dknopf/weshackCode"
               class="genric-btn e-large info-border circle"
             >
-              Google Play Store</a
+              Github Repo Copy (Minus Firebase Keys)</a
             >
           </div>
         </div>
