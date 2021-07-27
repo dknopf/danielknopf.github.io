@@ -3149,6 +3149,20 @@ h6 {
 ============================================================================================ */
 /* My Tabs Area css
 ============================================================================================ */
+.collapsible-btn {
+  background: none;
+  border: none;
+  padding-top: 50%;
+}
+
+.collapsible-icon {
+  font-size: 2rem;
+  color: white;
+}
+
+.collapsible-btn-container {
+}
+
 .mytabs_area {
   background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
   background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
@@ -3182,7 +3196,7 @@ h6 {
   color: #222222;
 }
 .tabs_inner .tab-content .tab-pane .list {
-  max-width: 560px;
+  max-width: 768px;
   margin: auto;
   position: relative;
   padding-top: 40px;
@@ -3228,7 +3242,8 @@ h6 {
   margin-bottom: 0px;
 }
 .tabs_inner .tab-content .tab-pane .list li .media .d-flex {
-  padding-right: 150px;
+  padding-right: 200px;
+  padding-left: 75px;
 }
 .tabs_inner .tab-content .tab-pane .list li .media .d-flex p {
   color: rgba(255, 255, 255, 0.75);
