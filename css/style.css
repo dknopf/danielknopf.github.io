@@ -3152,7 +3152,7 @@ h6 {
 .collapsible-btn {
   background: none;
   border: none;
-  padding-top: 50%;
+  /* padding-top: 50%; */
 }
 
 .collapsible-icon {
@@ -3161,6 +3161,7 @@ h6 {
 }
 
 .collapsible-btn-container {
+  height: 100%;
 }
 
 .mytabs_area {
