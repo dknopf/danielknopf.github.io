@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Daniel Knopf-Recursion Visualizer</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="vendors/linericon/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css" />
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
+    <link rel="stylesheet" href="vendors/animate-css/animate.css" />
+    <link rel="stylesheet" href="vendors/popup/magnific-popup.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <!--================Header Menu Area =================-->
+    <header class="header_area">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container box_1620">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="index.html"
+              ><img class="navbar-logo" src="img/daniel.png" alt=""
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#experience"
+                    >Experience</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--================Header Menu Area =================-->
+
+    <!--================Home Banner Area =================-->
+    <section class="project_banner_area">
+      <!-- <div class="box_1620">
+        <div class="banner_inner d-flex align-items-center">
+          <div class="container">
+            <div class="banner_content text-center"></div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!-- Start Sample Area -->
+    <section class="main-content">
+      <div class="container">
+        <div class="row justify-content-content">
+          <div class="col-12 text-center">
+            <h1 class="title-color">Recursion Visualizer</h1>
+          </div>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-10">
+            <img
+              class="img-fluid"
+              src="img/project_pages/recursion_visualizer/recursionVisualizerIcon.png"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sample-text-area">
+      <div class="container">
+        <div class="text-left pt-5">
+          <h3 class="text-heading title_color">Description</h3>
+          <p class="sample-text">
+            This project, called Recursion Visualizer, is my final project for a
+            Creative Coding class I took Fall 2021. It is a program written in
+            <a href="https://processing.org/">Processing</a> that represents the
+            way that I think about recursion, illustrated via coloring squares
+            in a grid. This was my first time doing any sort of art with code,
+            so it was a blast to create some fun visuals!
+          </p>
+        </div>
+        <div class="text-left pt-5">
+          <h3 class="text-heading title_color">A Visual Learner</h3>
+          <p class="sample-text">
+            I am someone who really needs to visualize things in order to
+            understand them well. Whenever I try to solve algorithms or plan out
+            a new project I try to write everything down and draw out pictures
+            or graphs. When we were assigned to create some sort of "drawing
+            tool" for this Creative Coding class I tried to think of what was
+            most meaningful to me and what I found most important. I decided
+            that for me, the perfect intersection of code and visualization was
+            recursion.
+          </p>
+        </div>
+        <div class="text-left pt-5">
+          <h3 class="text-heading title_color">Recursion</h3>
+          <p class="sample-text">
+            The way that I tend to think of recursion is that you start with
+            some big set, and then go down and down the stack until you reach
+            the base case, at which point you go back up the stack with each
+            level receiving information from the one before it. The first
+            reucrsive bit is the overall grid, which is created by recursively
+            calling a function that draws squares on smaller and smaller
+            widths/heights, with different origin points. You can click the plus
+            or minus buttons, or press "p" or "m" to increase or decrease the
+            recursion level and make the grid bigger or smaller.
+
+            <!-- Then, the way
+            that the actual visualizer works is that when you hold down your
+            mouse on a square it "grows" a square outward, ring by ring. The
+            final grown square you get when you release your mouse represents
+            the set that you start out with in a recursive function. -->
+          </p>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-5 p-5 dual-image">
+            <img
+              class="img-fluid"
+              src="img/project_pages/recursion_visualizer/lessRecursion.png"
+            />
+          </div>
+          <div class="col-5 p-5 dual-image">
+            <img
+              class="img-fluid"
+              src="img/project_pages/recursion_visualizer/moreRecursion.png"
+            />
+          </div>
+        </div>
+        <div class="text-left pt-5">
+          <p class="sample-text">
+            Then, the way that the actual visualizer works is that when you hold
+            down your mouse on a square it "grows" a square outward, ring by
+            ring. The final grown square you get when you release your mouse
+            represents the set that you start out with in a recursive function.
+          </p>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-10">
+            <img
+              class="img-fluid"
+              src="img/project_pages/recursion_visualizer/grownSquare.png"
+            />
+          </div>
+        </div>
+        <div class="text-left pt-5">
+          <p class="sample-text">
+            Once the grown square has been created and the mouse is released,
+            the "recursion" starts. Beginning with the outermost ring,
+            representing the full version of the set, each ring is colored in,
+            one at a time, to show the recursive calls getting smaller and
+            smaller. Once the colored ring hits the center, representing the
+            base case, a color is chosen and the recursive call stack begins to
+            be resolved. Each ring is colored in based on the ring before it,
+            resolving the recursive call stack where each call is based on the
+            call before it.
+          </p>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-5 p-5 dual-image">
+            <img
+              class="img-fluid"
+              src="img/project_pages/recursion_visualizer/recursionDown.png"
+            />
+          </div>
+          <div class="col-5 p-5 dual-image">
+            <img
+              class="img-fluid"
+              src="img/project_pages/recursion_visualizer/recursionUp.png"
+            />
+          </div>
+        </div>
+
+        <div class="text-left pt-5">
+          <h3 class="text-heading title_color">Rainbow Mode</h3>
+          <p class="sample-text">
+            In addition to the pure visualiztion mode, there is also a fun
+            rainbow mode that allows a bit more flexibility and freedom. In this
+            mode, the rings are created based on where the mouse is and are
+            colored randomly, so it isn't a great representation of recursion
+            but its fun to play with and to create art with!
+          </p>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-5 p-5 dual-image">
+            <img
+              class="img-fluid"
+              src="img/project_pages/recursion_visualizer/rainbowMode1.png"
+            />
+          </div>
+          <div class="col-5 p-5 dual-image">
+            <img
+              class="img-fluid"
+              src="img/project_pages/recursion_visualizer/rainbowMode2.png"
+            />
+          </div>
+        </div>
+
+        <div class="row py-5 justify-content-center">
+          <div class="col-md-6 col-12 pb-3">
+            <a
+              href="https://github.com/dknopf/recursionVisualizer"
+              class="genric-btn e-large info circle"
+              >Github</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================Footer Area =================-->
+    <footer class="footer_area p_120" id="contact">
+      <div class="container">
+        <div class="row footer_inner">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <aside class="f_widget social_widget">
+                  <div class="f_title">
+                    <h2>Contact Me!</h2>
+                  </div>
+                  <ul class="list">
+                    <li>
+                      <a href="mailto:danielkn609@gmail.com"
+                        ><i class="fa fa-envelope"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/knopython"
+                        ><i class="fa fa-twitter"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/danielkn609/"
+                        ><i class="fa fa-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com/in/daniel-knopf-609/"
+                        ><i class="fa fa-linkedin"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--================End Footer Area =================-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendors/counter-up/jquery.counterup.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/theme.js"></script>
+  </body>
+</html>
