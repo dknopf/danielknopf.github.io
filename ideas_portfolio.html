@@ -244,10 +244,122 @@
       <div class="text-left pt-5">
         <h3 class="text-heading title_color">Overview</h3>
         <p class="sample-text">
-          For IDEA170—Mechanical Engineering, I had to build something that would hop (jump) on its own, after a wait time of 8 seconds. 
-          For this, I created a hopper that used an expanding ear plug as a timer, with a rubber tubing
+          For IDEA170—Mechanical Engineering, I had to build something that would hop (jump) on its own, after a wait time of 8 seconds, and would 
+          also follow an additional personal design goal. My design goal was to have my hopper jump... very high. Unfortunately, I couldn't make that 
+          part work and my final hopper only hopped slightly off the table, but it did hop indeed! 
+          For my final version, I created a hopper that used an expanding ear plug with a pointed stick attatched as a timer that popped a balloon (trigger) and stretched out rubber tubing attatched to a leg
+          as the force needed to hop. After LOTS of iterations, I was able to get it to work, and it makes a small jump off the table!
+        </p>
+      </div>
+      <div class="row justify-content-center pt-5">
+        <div class="col-10">
+          <video width="100%" controls>
+            <source src="img/project_pages/ideas_portfolio/hopper_video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="text-left pt-5">
+        <h3 class="text-heading title_color">Friction Timer</h3>
+        <p class="sample-text">
+          My original plan for the hopper was to use a rotational friction timer but have it be connected to the force that was causing the overall hop. 
+          I spent a huge amount of time working with that idea and tinkering with the friction timer. The way that the friction timer works is that I have
+          an aluminium rod inside of a piece of rubber tubing, and by squeezing the rubber tubing on the rod it creates a lot of friction and makes it hard
+          for the rod to turn. Then, I glued a piece of MDF (wood-esque material) to the rod, with a little arm sticking out. Then, I connected the rubber 
+          tubing to the arm by zip tying them together. That way, I could have the rubber tubing pull on the MDF arm, which would turn very slowly because of
+          the friction on the rod, and once the arm was pointed down enough the zip tie would slide off, releasing the rubber tubing.
+        </p>
+      </div>
+      <div class="row justify-content-center pt-5">
+        <div class="col-10">
+          <img
+            class="img-fluid"
+            src="img/project_pages/ideas_portfolio/hopper_v1.jpeg"
+          />
+        </div>
+      </div>
+      <div class="text-left pt-5">
+        <p class="sample-text">
+          However, 
+          I quickly ran into the problem of not having enough friction to ensure that the arm would move slowly enough. To fix this, I tried two methods of 
+          squeezing. The first method I tried was to 3D print a piece that the rubber tubing + rod would fit into, and which could be squeezed by tighening
+          screws slotted through the top holes. However, this didn't work as well as the plastic wasn't malleable enough and would frequently break instead of bending.
+          It also took several hours to 3D print, so I instead went with a different method and just squished the tubing between two pieces of wood that I screwed
+          together to tighten.
          
         </p>
+      </div>
+      <div class="row justify-content-center pt-5">
+        <div class="col-5 p-5 dual-image">
+          <img class="img-fluid" src="img/project_pages/ideas_portfolio/squeezer_3d.jpeg" />
+        </div>
+        <div class="col-5 p-5 dual-image">
+          <img class="img-fluid" src="img/project_pages/ideas_portfolio/squeezer.jpeg" />
+        </div>
+      </div>
+      <div class="text-left pt-5">
+        <h3 class="text-heading title_color">Prototype 2</h3>
+        <p class="sample-text">
+          In addition to working on the friction timer, I began to build out the system for my hopping. I had always been planning
+          on having my hop be done by a leg (big rod of wood) which slams into the ground, propelling the entire hopper upward. I attatched 
+          my big wooden leg to the rubber tubing with some more MDF squeezing technology, and connected the rubber tubing to the hopper with, you guessed it,
+          more MDF squeezing! At this point, I had a prototype of all of the parts in my current design for the hopper.
+        </p>
+      </div>
+      <div class="row justify-content-center pt-5">
+        <div class="col-5 p-5 dual-image">
+          <img class="img-fluid" src="img/project_pages/ideas_portfolio/hopper_v2.jpg" />
+        </div>
+        <div class="col-5 p-5 dual-image">
+          <img class="img-fluid" src="img/project_pages/ideas_portfolio/hopper_v2_above.jpeg" />
+        </div>
+      </div>
+      
+      <div class="text-left pt-5">
+        <h3 class="text-heading title_color">Redesign</h3>
+        <p class="sample-text">
+          Unfortunately, after weeks of tinkering and adjusting, I discovered that it was simply not feasible to generate enough 
+          friction to counteract the immense force that the rubber tubing was exerting on the friction timer. I decided to do a big redesign and 
+          change the timer mechanism of my project completely. I realized I had to decouple the timer/trigger from the force of the hopper.
+          I kept the hopping mechanism the same, with a leg that slammed into the ground attatched to rubber tubing, but I changed the timer/trigger completely.
+          Instead of a friction timer/trigger, I had the rubber tubing attatched to two arms that held it in place, and the arms were prevented from
+          moving out of place and releasing the leg by a balloon that was placed in between them. Then, as a trigger I whittled down a 
+          wooden dowel into a little spike and glued it to an ear plug. By compressing the ear plug and placing it above the balloon,
+          it would gradually decompress and push the spike far enough into the balloon to pop it, releasing the leg and causing the entire contraption to hop!
+        </p>
+      </div>
+      <div class="row justify-content-center pt-5">
+        <div class="col-10">
+          <img
+            class="img-fluid"
+            src="img/project_pages/ideas_portfolio/hopper_versions.jpeg"
+          />
+        </div>
+      </div>
+      <div class="text-left pt-5">
+        <h3 class="text-heading title_color">Energy Calculations</h3>
+        <p class="sample-text">
+          <ul>
+            <li>Hopper energy trendline: f(x) = 21.97x + 3.13</li>
+            <li>Stored potential energy: 1/2 * (1*25.1136) = 12.5568</li>
+            <li>Theoretical peak hop height: 12.5568/1.29 = 0.969 meters</li>
+            <li>Actual hop height: 0.15 meters</li>
+            <li>Hopper efficiency: 1.5/9.69 * 100 = 15.4% </li>
+        </ul>
+         My hopper was quite inefficient, unfortunately. I believe that the overall contraption weighed a lot, as it was fairly tall,
+         which prevented it from hopping as high as it could have. Additionally, I think that the trigger mechanism forced a lot
+         of energy to be used pushing the arms of the trigger outward, inseatd of fulling forcing the leg downward, which also spent some energy.
+         Furthermore, the leg tended to go slightly diagonally instead of straight down, causing some of the momentum to be forward momentum instead
+         of upward momentum.
+        </p>
+      </div>
+      <div class="row justify-content-center pt-5">
+        <div class="col-10">
+          <img
+            class="img-fluid"
+            src="img/project_pages/ideas_portfolio/hopper_energy_chart.png"
+          />
+        </div>
       </div>
       </div>
     </section>
